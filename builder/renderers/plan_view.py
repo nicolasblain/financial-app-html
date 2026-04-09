@@ -19,6 +19,7 @@ METRIC_DEFS = [
     ("rrsp_balance", "RRSP", "$"),
     ("tfsa_balance", "TFSA", "$"),
     ("non_registered", "Non-Registered", "$"),
+    ("resp_balance", "RESP", "$"),
     ("total_debt", "Total Debt", "$"),
     ("mortgage_balance", "Mortgage Balance", "$"),
     ("net_worth", "Net Worth", "$"),
