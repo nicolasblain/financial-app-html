@@ -469,6 +469,158 @@ main {
   font-weight: 500;
 }
 
+/* --- Plan view card status pills --- */
+
+.card-stage--plan-draft    { background: #fff3e0; color: #e65100; }
+.card-stage--plan-active   { background: #e8f5e9; color: #2e7d32; }
+.card-stage--plan-review   { background: #e3f2fd; color: #1565c0; }
+.card-stage--plan-archived { background: #f5f5f5; color: #757575; }
+
+/* --- Plan view (full document in overlay) --- */
+
+.plan-view h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.plan-header-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.plan-header-meta strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.plan-status {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.plan-status--draft    { background: #fff3e0; color: #e65100; }
+.plan-status--active   { background: #e8f5e9; color: #2e7d32; }
+.plan-status--review   { background: #e3f2fd; color: #1565c0; }
+.plan-status--archived { background: #f5f5f5; color: #757575; }
+
+/* Metrics grid */
+
+.plan-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.65rem;
+  margin-bottom: 1.75rem;
+  padding: 1rem;
+  background: var(--bg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.plan-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.6rem 0.75rem;
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.plan-metric-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.plan-metric--negative .plan-metric-value {
+  color: #c0392b;
+}
+
+.plan-metric-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+/* Plan body markdown */
+
+.plan-body {
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+}
+
+.plan-body h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 1.75rem 0 0.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.3rem;
+  color: var(--text);
+}
+
+.plan-body h3 {
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin: 1.25rem 0 0.4rem;
+}
+
+.plan-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+  font-size: 0.88rem;
+}
+
+.plan-body th, .plan-body td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+
+.plan-body th {
+  background: var(--bg);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+}
+
+.plan-body td {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Source file hint */
+
+.plan-file-hint {
+  margin-top: 2rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--border);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.plan-file-hint code {
+  background: var(--search-bg);
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  font-size: 0.72rem;
+}
+
 /* --- Responsive --- */
 
 @media (max-width: 600px) {

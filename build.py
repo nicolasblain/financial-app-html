@@ -5,6 +5,7 @@ from pathlib import Path
 
 from builder import content, navigation, registry, search_index, template
 from builder.renderers import calculator as calc_renderer
+from builder.renderers import plan_view as plan_renderer
 
 ROOT = Path(__file__).parent
 CONTENT_ROOT = ROOT / "content"
@@ -32,6 +33,9 @@ def main():
     placeholders["{{SEARCH_INDEX}}"] = search_index.build(items_by_type)
     placeholders["{{CALCULATOR_DATA}}"] = calc_renderer.build_data(
         items_by_type.get("calculators", [])
+    )
+    placeholders["{{PLAN_DATA}}"] = plan_renderer.build_data(
+        items_by_type.get("plans", [])
     )
 
     # Phase 6-7: assemble + write

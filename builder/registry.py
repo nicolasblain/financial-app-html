@@ -3,7 +3,7 @@
 Adding a new content type = adding one entry here + writing its renderer.
 """
 
-from .renderers import module_card, plan_section, case_study, glossary, calculator
+from .renderers import module_card, plan_section, case_study, glossary, calculator, plan_view
 
 # Each entry:
 #   folder       — subfolder under content/
@@ -73,6 +73,16 @@ TYPES = [
         "nav_label": "Calculators",
         "schema": {
             "required": ["title", "inputs", "formula"],
+        },
+    },
+    {
+        "key": "plans",
+        "folder": "plans",
+        "placeholder": "{{PLAN_VIEW_LIST}}",
+        "renderer": plan_view,
+        "nav_label": "Client Plans",
+        "schema": {
+            "required": ["title", "client"],
         },
     },
 ]

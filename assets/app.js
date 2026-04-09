@@ -165,7 +165,7 @@ function parseFrontmatter(md) {
     loadMarkdown(href);
   });
 
-  // Calculator card clicks — delegated to calculators.js via custom event
+  // Calculator card clicks
   document.addEventListener('click', function(e) {
     var btn = e.target.closest('[data-calc-slug]');
     if (!btn) return;
@@ -173,6 +173,16 @@ function parseFrontmatter(md) {
     var slug = btn.getAttribute('data-calc-slug');
     history.pushState(null, '', '#calculators/' + slug);
     window.openCalculator && window.openCalculator(slug, body, openOverlay);
+  });
+
+  // Plan view card clicks
+  document.addEventListener('click', function(e) {
+    var btn = e.target.closest('[data-plan-slug]');
+    if (!btn) return;
+    e.preventDefault();
+    var slug = btn.getAttribute('data-plan-slug');
+    history.pushState(null, '', '#plans/' + slug);
+    window.openPlanView && window.openPlanView(slug, body, openOverlay);
   });
 
   function handleHash() {
@@ -188,6 +198,8 @@ function parseFrontmatter(md) {
     if (folder === 'calculators') {
       openOverlay();
       window.openCalculator && window.openCalculator(slug, body, openOverlay);
+    } else if (folder === 'plans') {
+      window.openPlanView && window.openPlanView(slug, body, openOverlay);
     } else {
       loadMarkdown('content/' + folder + '/' + slug + '.md');
     }
