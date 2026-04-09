@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Planning</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <h1>Financial Planning</h1>
+    <div class="search-wrap">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="search" placeholder="Search everything…" autocomplete="off" spellcheck="false">
+    </div>
+    <nav class="nav-tabs" id="navTabs">
+      {{NAV_TABS}}
+    </nav>
+    <div class="search-count" id="searchCount"></div>
+  </div>
+</header>
+
+<main>
+  <section class="content-section" data-section="modules">
+    <h2 class="section-heading">Modules</h2>
+    <ul class="content-grid">
+{{MODULE_LIST}}
+    </ul>
+  </section>
+
+  <section class="content-section" data-section="plan-sections">
+    <h2 class="section-heading">Plan Sections</h2>
+    <ul class="content-grid">
+{{PLAN_SECTION_LIST}}
+    </ul>
+  </section>
+
+  <section class="content-section" data-section="case-studies">
+    <h2 class="section-heading">Case Studies</h2>
+    <ul class="content-grid">
+{{CASE_STUDY_LIST}}
+    </ul>
+  </section>
+
+  <section class="content-section" data-section="calculators">
+    <h2 class="section-heading">Calculators</h2>
+    <ul class="content-grid">
+{{CALCULATOR_LIST}}
+    </ul>
+  </section>
+
+  <section class="content-section" data-section="glossary">
+    <h2 class="section-heading">Glossary</h2>
+    <ul class="content-grid content-grid--compact">
+{{GLOSSARY_LIST}}
+    </ul>
+  </section>
+
+  <div class="no-results" id="noResults">No results match your search.</div>
+</main>
+
+<div class="detail-overlay" id="detailOverlay">
+  <div class="detail-overlay-content">
+    <button class="detail-close" id="detailClose" aria-label="Close">&times;</button>
+    <button class="detail-back" id="detailBack">&larr; Back</button>
+    <div id="detailBody"></div>
+  </div>
+</div>
+
+<script type="application/json" id="searchIndex">{{SEARCH_INDEX}}</script>
+<script type="application/json" id="calculatorData">{{CALCULATOR_DATA}}</script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/calculators.js"></script>
+</body>
+</html>

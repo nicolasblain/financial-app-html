@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Planning</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <h1>Financial Planning</h1>
+    <div class="search-wrap">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="search" placeholder="Search everything…" autocomplete="off" spellcheck="false">
+    </div>
+    <nav class="nav-tabs" id="navTabs">
+      <button class="nav-tab active" data-type="all">All</button>
+      <button class="nav-tab" data-type="modules">Modules <span class="nav-count">6</span></button>
+      <button class="nav-tab" data-type="plan-sections">Plan Sections <span class="nav-count">4</span></button>
+      <button class="nav-tab" data-type="case-studies">Case Studies <span class="nav-count">2</span></button>
+      <button class="nav-tab" data-type="glossary">Glossary <span class="nav-count">4</span></button>
+      <button class="nav-tab" data-type="calculators">Calculators <span class="nav-count">3</span></button>
+    </nav>
+    <div class="search-count" id="searchCount"></div>
+  </div>
+</header>
+
+<main>
+  <section class="content-section" data-section="modules">
+    <h2 class="section-heading">Modules</h2>
+    <ul class="content-grid">
+    <li class="content-card module-card" data-type="module" data-name="Income &amp; Employment Intake" data-stage="Intake" data-tags="income employment" data-slug="intake-income-and-employment" data-order="10"><a href="content/modules/intake-income-and-employment.md" class="card-inner"><span class="card-stage card-stage--intake">Intake</span><h3 class="card-title">Income &amp; Employment Intake</h3><p class="card-desc">Collect employment status, pay cadence, and variable compensation.</p></a></li>
+    <li class="content-card module-card" data-type="module" data-name="Goal Setting" data-stage="Goals" data-tags="goals values" data-slug="goal-setting" data-order="10"><a href="content/modules/goal-setting.md" class="card-inner"><span class="card-stage card-stage--goals">Goals</span><h3 class="card-title">Goal Setting</h3><p class="card-desc">Structured goal elicitation before the first working session.</p></a></li>
+    <li class="content-card module-card" data-type="module" data-name="Home Purchase Assistant" data-stage="Analysis" data-tags="real-estate cash-flow" data-slug="home-purchase-assistant" data-order="20"><a href="content/modules/home-purchase-assistant.md" class="card-inner"><span class="card-stage card-stage--analysis">Analysis</span><h3 class="card-title">Home Purchase Assistant</h3><p class="card-desc">Decide whether and when buying a home fits the client&#x27;s plan.</p><div class="card-prereqs">Prereqs: Income &amp; Employment Intake, Goal Setting</div></a></li>
+    <li class="content-card module-card" data-type="module" data-name="Retirement Projection" data-stage="Analysis" data-tags="retirement projections" data-slug="retirement-projection" data-order="30"><a href="content/modules/retirement-projection.md" class="card-inner"><span class="card-stage card-stage--analysis">Analysis</span><h3 class="card-title">Retirement Projection</h3><p class="card-desc">Project net worth at retirement under base and stress scenarios.</p><div class="card-prereqs">Prereqs: Income &amp; Employment Intake, Goal Setting</div></a></li>
+    <li class="content-card module-card" data-type="module" data-name="Protection Review" data-stage="Analysis" data-tags="insurance protection" data-slug="protection-review" data-order="40"><a href="content/modules/protection-review.md" class="card-inner"><span class="card-stage card-stage--analysis">Analysis</span><h3 class="card-title">Protection Review</h3><p class="card-desc">Check life, disability, and critical illness coverage against actual need.</p><div class="card-prereqs">Prereqs: Income &amp; Employment Intake</div></a></li>
+    <li class="content-card module-card" data-type="module" data-name="Annual Review" data-stage="Monitoring" data-tags="monitoring review" data-slug="monitoring-annual-review" data-order="10"><a href="content/modules/monitoring-annual-review.md" class="card-inner"><span class="card-stage card-stage--monitoring">Monitoring</span><h3 class="card-title">Annual Review</h3><p class="card-desc">Structured yearly checkpoint against the plan.</p><div class="card-prereqs">Prereqs: Goal Setting</div></a></li>
+    </ul>
+  </section>
+
+  <section class="content-section" data-section="plan-sections">
+    <h2 class="section-heading">Plan Sections</h2>
+    <ul class="content-grid">
+    <li class="content-card plan-section-card" data-type="plan-section" data-name="Cash Flow Strategy" data-tags="all" data-slug="cash-flow-strategy"><a href="content/plan-sections/cash-flow-strategy.md" class="card-inner"><span class="card-stage card-stage--section">§ 1.0</span><h3 class="card-title">Cash Flow Strategy</h3><p class="card-desc">Baseline spending, savings rate, and liquidity targets.</p></a></li>
+    <li class="content-card plan-section-card" data-type="plan-section" data-name="Retirement Strategy" data-tags="pre-retirees retirees" data-slug="retirement-strategy"><a href="content/plan-sections/retirement-strategy.md" class="card-inner"><span class="card-stage card-stage--section">§ 2.0</span><h3 class="card-title">Retirement Strategy</h3><p class="card-desc">Accumulation plan, account priority, and drawdown approach.</p></a></li>
+    <li class="content-card plan-section-card" data-type="plan-section" data-name="Housing Strategy" data-tags="renters buyers owners" data-slug="housing-strategy"><a href="content/plan-sections/housing-strategy.md" class="card-inner"><span class="card-stage card-stage--section">§ 3.0</span><h3 class="card-title">Housing Strategy</h3><p class="card-desc">How housing decisions fit the overall plan.</p></a></li>
+    <li class="content-card plan-section-card" data-type="plan-section" data-name="Risk Management" data-tags="all" data-slug="risk-management"><a href="content/plan-sections/risk-management.md" class="card-inner"><span class="card-stage card-stage--section">§ 4.0</span><h3 class="card-title">Risk Management</h3><p class="card-desc">Insurance coverage matched to actual need.</p></a></li>
+    </ul>
+  </section>
+
+  <section class="content-section" data-section="case-studies">
+    <h2 class="section-heading">Case Studies</h2>
+    <ul class="content-grid">
+    <li class="content-card case-study-card" data-type="case-study" data-name="Pre-Retiree Rebalances Insurance Coverage" data-tags="protection-review" data-persona="Pre-retiree" data-slug="pre-retiree-coverage-rebalance"><a href="content/case-studies/pre-retiree-coverage-rebalance.md" class="card-inner"><span class="card-stage card-stage--case">Pre-retiree</span><h3 class="card-title">Pre-Retiree Rebalances Insurance Coverage</h3><p class="card-desc">Dropping unnecessary life coverage freed $2,400 per year.</p></a></li>
+    <li class="content-card case-study-card" data-type="case-study" data-name="First Home, Dual-Income Couple" data-tags="home-purchase-assistant retirement-projection" data-persona="Young couple" data-slug="first-home-dual-income"><a href="content/case-studies/first-home-dual-income.md" class="card-inner"><span class="card-stage card-stage--case">Young couple</span><h3 class="card-title">First Home, Dual-Income Couple</h3><p class="card-desc">How the home purchase decision reshaped their retirement path.</p></a></li>
+    </ul>
+  </section>
+
+  <section class="content-section" data-section="calculators">
+    <h2 class="section-heading">Calculators</h2>
+    <ul class="content-grid">
+    <li class="content-card calculator-card" data-type="calculator" data-name="Compound Growth" data-slug="compound-growth"><button type="button" class="card-inner" data-calc-slug="compound-growth"><span class="card-stage card-stage--calc">Calculator</span><h3 class="card-title">Compound Growth</h3><p class="card-desc">Future value of a lump sum at a compound annual rate.</p></button></li>
+    <li class="content-card calculator-card" data-type="calculator" data-name="Monthly Contribution for a Goal" data-slug="monthly-contribution-target"><button type="button" class="card-inner" data-calc-slug="monthly-contribution-target"><span class="card-stage card-stage--calc">Calculator</span><h3 class="card-title">Monthly Contribution for a Goal</h3><p class="card-desc">Monthly amount required to reach a target amount at a given return.</p></button></li>
+    <li class="content-card calculator-card" data-type="calculator" data-name="Mortgage Payment" data-slug="mortgage-payment"><button type="button" class="card-inner" data-calc-slug="mortgage-payment"><span class="card-stage card-stage--calc">Calculator</span><h3 class="card-title">Mortgage Payment</h3><p class="card-desc">Monthly payment for a fixed-rate amortizing mortgage.</p></button></li>
+    </ul>
+  </section>
+
+  <section class="content-section" data-section="glossary">
+    <h2 class="section-heading">Glossary</h2>
+    <ul class="content-grid content-grid--compact">
+    <li class="content-card glossary-card" data-type="glossary" data-name="Emergency Fund" data-tags="" data-slug="emergency-fund"><a href="content/glossary/emergency-fund.md" class="card-inner"><h3 class="card-title">Emergency Fund</h3></a></li>
+    <li class="content-card glossary-card" data-type="glossary" data-name="Marginal Tax Rate MTR" data-tags="MTR" data-slug="marginal-tax-rate"><a href="content/glossary/marginal-tax-rate.md" class="card-inner"><h3 class="card-title">Marginal Tax Rate</h3><p class="card-desc">MTR</p></a></li>
+    <li class="content-card glossary-card" data-type="glossary" data-name="RRSP Registered Retirement Savings Plan" data-tags="Registered Retirement Savings Plan" data-slug="rrsp"><a href="content/glossary/rrsp.md" class="card-inner"><h3 class="card-title">RRSP</h3><p class="card-desc">Registered Retirement Savings Plan</p></a></li>
+    <li class="content-card glossary-card" data-type="glossary" data-name="TFSA Tax-Free Savings Account" data-tags="Tax-Free Savings Account" data-slug="tfsa"><a href="content/glossary/tfsa.md" class="card-inner"><h3 class="card-title">TFSA</h3><p class="card-desc">Tax-Free Savings Account</p></a></li>
+    </ul>
+  </section>
+
+  <div class="no-results" id="noResults">No results match your search.</div>
+</main>
+
+<div class="detail-overlay" id="detailOverlay">
+  <div class="detail-overlay-content">
+    <button class="detail-close" id="detailClose" aria-label="Close">&times;</button>
+    <button class="detail-back" id="detailBack">&larr; Back</button>
+    <div id="detailBody"></div>
+  </div>
+</div>
+
+<script type="application/json" id="searchIndex">[{"type": "modules", "slug": "goal-setting", "name": "Goal Setting", "haystack": "goal setting structured goal elicitation before the first working session. goals goals values"}, {"type": "modules", "slug": "home-purchase-assistant", "name": "Home Purchase Assistant", "haystack": "home purchase assistant decide whether and when buying a home fits the client's plan. analysis real-estate cash-flow"}, {"type": "modules", "slug": "intake-income-and-employment", "name": "Income & Employment Intake", "haystack": "income & employment intake collect employment status, pay cadence, and variable compensation. intake income employment"}, {"type": "modules", "slug": "monitoring-annual-review", "name": "Annual Review", "haystack": "annual review structured yearly checkpoint against the plan. monitoring monitoring review"}, {"type": "modules", "slug": "protection-review", "name": "Protection Review", "haystack": "protection review check life, disability, and critical illness coverage against actual need. analysis insurance protection"}, {"type": "modules", "slug": "retirement-projection", "name": "Retirement Projection", "haystack": "retirement projection project net worth at retirement under base and stress scenarios. analysis retirement projections"}, {"type": "plan-sections", "slug": "cash-flow-strategy", "name": "Cash Flow Strategy", "haystack": "cash flow strategy baseline spending, savings rate, and liquidity targets."}, {"type": "plan-sections", "slug": "housing-strategy", "name": "Housing Strategy", "haystack": "housing strategy how housing decisions fit the overall plan."}, {"type": "plan-sections", "slug": "retirement-strategy", "name": "Retirement Strategy", "haystack": "retirement strategy accumulation plan, account priority, and drawdown approach."}, {"type": "plan-sections", "slug": "risk-management", "name": "Risk Management", "haystack": "risk management insurance coverage matched to actual need."}, {"type": "case-studies", "slug": "first-home-dual-income", "name": "First Home, Dual-Income Couple", "haystack": "first home, dual-income couple how the home purchase decision reshaped their retirement path. young couple"}, {"type": "case-studies", "slug": "pre-retiree-coverage-rebalance", "name": "Pre-Retiree Rebalances Insurance Coverage", "haystack": "pre-retiree rebalances insurance coverage dropping unnecessary life coverage freed $2,400 per year. pre-retiree"}, {"type": "glossary", "slug": "emergency-fund", "name": "Emergency Fund", "haystack": "emergency fund"}, {"type": "glossary", "slug": "marginal-tax-rate", "name": "Marginal Tax Rate", "haystack": "marginal tax rate mtr"}, {"type": "glossary", "slug": "rrsp", "name": "RRSP", "haystack": "rrsp registered retirement savings plan"}, {"type": "glossary", "slug": "tfsa", "name": "TFSA", "haystack": "tfsa tax-free savings account"}, {"type": "calculators", "slug": "compound-growth", "name": "Compound Growth", "haystack": "compound growth future value of a lump sum at a compound annual rate."}, {"type": "calculators", "slug": "monthly-contribution-target", "name": "Monthly Contribution for a Goal", "haystack": "monthly contribution for a goal monthly amount required to reach a target amount at a given return."}, {"type": "calculators", "slug": "mortgage-payment", "name": "Mortgage Payment", "haystack": "mortgage payment monthly payment for a fixed-rate amortizing mortgage."}]</script>
+<script type="application/json" id="calculatorData">{"compound-growth": {"title": "Compound Growth", "summary": "Future value of a lump sum at a compound annual rate.", "inputs": ["principal", "rate", "years"], "labels": ["Principal ($)", "Annual rate (%)", "Years"], "defaults": [10000.0, 6.0, 25.0], "formula": "principal * Math.pow(1 + rate / 100, years)", "output": "Future value: $ {result}", "body": "Shows how an amount invested today grows over time at a constant compound rate. A 6% rate roughly doubles money every 12 years (the rule of 72).\n"}, "monthly-contribution-target": {"title": "Monthly Contribution for a Goal", "summary": "Monthly amount required to reach a target amount at a given return.", "inputs": ["target", "rate", "years"], "labels": ["Target amount ($)", "Annual rate (%)", "Years"], "defaults": [100000.0, 5.0, 20.0], "formula": "target * (rate / 100 / 12) / (Math.pow(1 + rate / 100 / 12, years * 12) - 1)", "output": "Required monthly contribution: $ {result}", "body": "Solves the future-value-of-an-annuity formula for the monthly payment. Assumes contributions at the end of each month and a constant return.\n"}, "mortgage-payment": {"title": "Mortgage Payment", "summary": "Monthly payment for a fixed-rate amortizing mortgage.", "inputs": ["principal", "rate", "years"], "labels": ["Principal ($)", "Annual rate (%)", "Amortization (years)"], "defaults": [400000.0, 5.0, 25.0], "formula": "(principal * (rate / 100 / 12)) / (1 - Math.pow(1 + rate / 100 / 12, -years * 12))", "output": "Monthly payment: $ {result}", "body": "Standard amortizing mortgage payment. Does not include property taxes or insurance. Compare the result against the cash flow ceiling from the Cash Flow Strategy plan section before acting on it.\n"}}</script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/calculators.js"></script>
+</body>
+</html>
